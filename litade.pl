@@ -25,6 +25,7 @@ foreach my $taxid (@input){
     &descend($taxid, $taxid);
 }
 
+# Prints leaf nodes descending from input taxon
 sub descend {
     my ($original, $current) = @_;
     if(exists $taxdat{$current}){
@@ -36,6 +37,7 @@ sub descend {
     }
 }
 
+# Get array of input taxon ids
 sub get_input {
     if(scalar @ARGV > 0){
         return \@ARGV;
@@ -45,6 +47,9 @@ sub get_input {
     }
 }
 
+# Load taxonomy file
+# Format:
+# parent child1,child2,...,childk
 sub get_taxdat {
     my $dir = abs_path($0);
     $dir =~ s/\/[^\/]+$//;
