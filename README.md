@@ -1,7 +1,11 @@
+[![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
+
 litade
 ======
 
 List input taxa species-level descendents
+
+This program is deprecated. Try using the R packages `taxize` or `taxizedb` instead.
 
 Examples
 ========
